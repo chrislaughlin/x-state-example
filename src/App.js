@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+    Stack,
+    Heading
+} from "@chakra-ui/core";
+
+import Lights from "./Lights";
+import WalkControls from "./WalkControls";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <Stack
+            justifyContent="center"
+            width="100%"
+            alignItems="center"
+            spacing="50px"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <Heading
+                fontSize="l"
+                color="#D9D4A8"
+            >
+                Traffic Lights
+            </Heading>
+
+            <Lights/>
+
+            <Heading
+                fontSize="l"
+                color="#D9D4A8"
+            >
+                Controls
+            </Heading>
+
+            <WalkControls/>
+        </Stack>
+    );
 }
 
 export default App;
